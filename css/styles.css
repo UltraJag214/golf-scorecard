@@ -18,3 +18,24 @@ label {
     color: #34626c;
 }
 
+.text-center {
+    border: solid 1px black;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.white {
+    background-color: white;
+}
+
+#courseName {
+    text-align: center;
+    color: #839b97;
+}
+
+.totals {
+    color: #34626c;
+}
+
+
