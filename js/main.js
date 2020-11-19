@@ -1,5 +1,5 @@
 var courses;
-var courseData =[[]] ;
+var courseData = {} ;
 $(document).ready(function () {
     onLoad();
 });
@@ -21,10 +21,6 @@ function populateSelectDropdown() {
     // Load First Element
     getCourseData(courses.courses[0].id);
 }
-$("#chooseCourse").change(function () {
-    var selectId = $( this ).val()
-    getCourseData(selectId);
-});
 function getCourseData(id){
     $.ajax(`https://golf-courses-api.herokuapp.com/courses/${id}`)
         .done(function (returnData) {
@@ -42,4 +38,34 @@ function populateDifficulty(data){
         var name = box.teeType.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
         $('#difficulty').append(`<option value="${box.teeTypeId}">${name}</option>`);
     })
+    // populate first element
+    populateCourseData(data.holes[0].teeBoxes[0].teeTypeId)
 }
+function populateCourseData(difficultyId){
+    var courseId = $('#chooseCourse').val();
+    var courseHoles = courseData[courseId].data.holes
+    var i = 0;
+    courseHoles.forEach(hole => {
+        var selectedDifficultyData;
+        hole.teeBoxes.forEach(teeBox => {
+            if(teeBox.teeTypeId == difficultyId){
+                selectedDifficultyData = teeBox;
+            }
+        })
+        $(`#yards${i}`).text(selectedDifficultyData.yards)
+        $(`#hdcp${i}`).text(selectedDifficultyData.hcp)
+        $(`#par${i}`).text(selectedDifficultyData.par)
+        i++;
+        console.log(i)
+        console.log(selectedDifficultyData)
+    })
+}
+$("#chooseCourse").change(function () {
+    var selectId = $( this ).val()
+    getCourseData(selectId);
+});
+$("#difficulty").change(function () {
+    var difficultyId = $( this ).val()
+    console.log(difficultyId)
+    populateCourseData(difficultyId);
+});
