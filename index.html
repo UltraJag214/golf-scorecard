@@ -18,7 +18,7 @@
     <div id="choices">
         <h2 id="GolfHeader">Lets play Golf!</h2>
         <label for="courses">Choose a course to play on:</label>
-        <select name="courses" id="chooseCourse" class="form-control col-5">
+        <select name="courses" id="chooseCourse" class="form-control col-4">
             <!-- <option value="Fox Hollow">Fox Hollow</option>
             <option value="Thanksgiving Point">Thanksgiving Point</option>
             <option value="Spanish Oaks">Spanish Oaks</option> -->
@@ -33,21 +33,25 @@
         </select>
         <br>
         <label>Choose which difficulty</label>
-        <select name="difficulty" id="difficulty" class="form-control col-5">
+        <select name="difficulty" id="difficulty" class="form-control col-4">
             <!-- <option value="men">Mens</option>
             <option value="women">Womens</option>
             <option value="amatuer">Amatuer</option>
             <option value="pro">Pro</option> -->
         </select>
         <br>
-        <button class="btn btn-success">Start Game</button>
+        <div class="wrap">
+            <input type="text" id="newUser" value="Username" class="form-control col-4">
+            <div class="spacer15"></div>
+            <button class="btn btn-success">Add User</button>
+        </div>
     </div>
     <h3 id="courseName"></h3>
     <div id="golf-card">
         <!-- holes 1-9 scorecard -->
         <div id="holes1-9">
             <div class="row">
-                <div class="col-1 left">HOLE</div>
+                <div class="col-1 text-center">HOLE</div>
                 <div class="col-1 text-center">1</div>
                 <div class="col-1 text-center">2</div>
                 <div class="col-1 text-center">3</div>
@@ -60,7 +64,7 @@
                 <div class="col-1 text-center">OUT</div>
             </div>
             <div class="row">
-                <div class="col-1 left">YARDS</div>
+                <div class="col-1 text-center">YARDS</div>
                 <div class="col-1 text-center" id="yards0"></div>
                 <div class="col-1 text-center" id="yards1"></div>
                 <div class="col-1 text-center" id="yards2"></div>
@@ -73,7 +77,7 @@
                 <div class="col-1 text-center"></div>
             </div>
             <div class="row">
-                <div class="col-1 left"> HDCP</div>
+                <div class="col-1 text-center"> HDCP</div>
                 <div class="col-1 text-center" id="hdcp0"></div>
                 <div class="col-1 text-center" id="hdcp1"></div>
                 <div class="col-1 text-center" id="hdcp2"></div>
@@ -86,7 +90,7 @@
                 <div class="col-1 text-center"></div>
             </div>
             <div class="row">
-                <div class="col-1 left">PAR</div>
+                <div class="col-1 text-center">PAR</div>
                 <div class="col-1 text-center" id="par0"></div>
                 <div class="col-1 text-center" id="par1"></div>
                 <div class="col-1 text-center" id="par2"></div>
@@ -98,12 +102,25 @@
                 <div class="col-1 text-center" id="par8"></div>
                 <div class="col-1 text-center"></div>
             </div>
+            <div class="row">
+                <div class="col-1 text-center">Hayden</div>
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <div class="col-1 text-center">45</div>
+            </div>
         </div>
         <div class="spacer10"></div>
         <!-- holes 10-18 scorecard -->
         <div id="holes10-18">
             <div class="row">
-                <div class="col-1 left">HOLE</div>
+                <div class="col-1 text-center">HOLE</div>
                 <div class="col-1 text-center">10</div>
                 <div class="col-1 text-center">11</div>
                 <div class="col-1 text-center">12</div>
@@ -116,7 +133,7 @@
                 <div class="col-1 text-center">IN</div>
             </div>
             <div class="row">
-                <div class="col-1 left">YARDS</div>
+                <div class="col-1 text-center">YARDS</div>
                 <div class="col-1 text-center" id="yards9"></div>
                 <div class="col-1 text-center" id="yards10"></div>
                 <div class="col-1 text-center" id="yards11"></div>
@@ -129,7 +146,7 @@
                 <div class="col-1 text-center"></div>
             </div>
             <div class="row">
-                <div class="col-1 left"> HDCP</div>
+                <div class="col-1 text-center"> HDCP</div>
                 <div class="col-1 text-center" id="hdcp9"></div>
                 <div class="col-1 text-center" id="hdcp10"></div>
                 <div class="col-1 text-center" id="hdcp11"></div>
@@ -142,7 +159,7 @@
                 <div class="col-1 text-center"></div>
             </div>
             <div class="row">
-                <div class="col-1 left">PAR</div>
+                <div class="col-1 text-center">PAR</div>
                 <div class="col-1 text-center" id="par9"></div>
                 <div class="col-1 text-center" id="par10"></div>
                 <div class="col-1 text-center" id="par11"></div>
@@ -154,13 +171,44 @@
                 <div class="col-1 text-center" id="par17"></div>
                 <div class="col-1 text-center"></div>
             </div>
+            <div class="row">
+                <div class="col-1 text-center">Hayden</div>
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <input type="number" class="col-1" value="5">
+                <div class="col-1 text-center">90</div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div id="parTotal" class="totals col-3"></div>
-        <div id="yardsTotal" class="totals col-3"></div>
-        <div id="handicapTotal" class="totals col-3"></div>
-        <div id="playerTotals" class="row totals"></div>
+        <br>
+
+        <div class="totals">
+            <div class="row">
+                <div class="col-1 text-center"></div>
+                <div class="col-1 text-center">Total</div>
+            </div>
+            <div class="row">
+                <div class="col-1 text-center">Hayden</div>
+                <div class="col-1 text-center">90</div>
+            </div>
+            <div class="row">
+                <div class="col-1 text-center">Chris</div>
+                <div class="col-1 text-center">90</div>
+            </div>
+            <div class="row">
+                <div class="col-1 text-center">Ryker</div>
+                <div class="col-1 text-center">90</div>
+            </div>
+            <div class="row">
+                <div class="col-1 text-center">Laura</div>
+                <div class="col-1 text-center">90</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
