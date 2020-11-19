@@ -53,7 +53,7 @@ function populateCourseData(difficultyId){
             }
         })
         $(`#yards${i}`).text(selectedDifficultyData.yards)
-        $(`#hdcp${i}`).text(selectedDifficultyData.hcp)
+        $(`#hcp${i}`).text(selectedDifficultyData.hcp)
         $(`#par${i}`).text(selectedDifficultyData.par)
         i++;
         console.log(i)
