@@ -23,24 +23,24 @@
     <!-- choices for the user to make -->
     <div class="bodyWrap">
         <div id="choices">
-            <h2 id="GolfHeader">Lets play Golf!</h2>
-            <label for="courses">Choose a course to play on:</label>
-            <select name="courses" id="chooseCourse" class="form-control col-4">
+            <h2 class="ml-3" id="GolfHeader">Lets play Golf!</h2>
+            <label for="courses" class="ml-3">Choose a course to play on:</label>
+            <select name="courses" id="chooseCourse" class="form-control ml-3 col-4">
                 <!-- <option value="Fox Hollow">Fox Hollow</option>
                 <option value="Thanksgiving Point">Thanksgiving Point</option>
                 <option value="Spanish Oaks">Spanish Oaks</option> -->
             </select>
             <br>
-            <label>How many players?</label>
-            <select name="playerCount" id="playerCount" class="form-control col-2">
+            <label class="ml-3">How many players?</label>
+            <select name="playerCount" id="playerCount" class="form-control ml-3 col-2">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
             <br>
-            <label>Choose which difficulty</label>
-            <select name="difficulty" id="difficulty" class="form-control col-4">
+            <label class="ml-3">Choose which difficulty</label>
+            <select name="difficulty" id="difficulty" class="form-control ml-3 col-4">
                 <!-- <option value="men">Mens</option>
                 <option value="women">Womens</option>
                 <option value="amatuer">Amatuer</option>
@@ -48,16 +48,16 @@
             </select>
             <br>
             <div class="wrap">
-                <input type="text" id="newUser" placeholder="Player Name" class="form-control col-4">
-                <div class="spacer15"></div>
-                <button id="newUserBtn" class="btn btn-success">Add User</button>
+                <input type="text" id="newUser" placeholder="Player Name" class="form-control ml-3 col-4">
+                <button id="newUserBtn" class="btn ml-3 btn-success">Add User</button>
+                <button id="startGame" class="btn ml-3 btn-success">Start Game</button>
             </div>
         </div>
         <h3 id="courseName"></h3>
         <div id="golf-card">
             <!-- holes 1-9 scorecard -->
             <div id="holes1-9">
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">HOLE</div>
                     <div class="col-1 text-center">1</div>
                     <div class="col-1 text-center">2</div>
@@ -70,7 +70,7 @@
                     <div class="col-1 text-center">9</div>
                     <div class="col-1 text-center">OUT</div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">YARDS</div>
                     <div class="col-1 text-center" id="yards0"></div>
                     <div class="col-1 text-center" id="yards1"></div>
@@ -83,7 +83,7 @@
                     <div class="col-1 text-center" id="yards8"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center"> HDCP</div>
                     <div class="col-1 text-center" id="hcp0"></div>
                     <div class="col-1 text-center" id="hcp1"></div>
@@ -96,7 +96,7 @@
                     <div class="col-1 text-center" id="hcp8"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">PAR</div>
                     <div class="col-1 text-center" id="par0"></div>
                     <div class="col-1 text-center" id="par1"></div>
@@ -109,7 +109,7 @@
                     <div class="col-1 text-center" id="par8"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div id="player0-0" class="row hide">
+                <div id="player0-0" class="row hide ml-3">
                     <div id="playerName0-0" class="col-1 text-center"></div>
                     <input id="player0Score0" type="number" class="col-1 text-center player0-0">
                     <input id="player0Score1" type="number" class="col-1 text-center player0-0">
@@ -122,7 +122,7 @@
                     <input id="player0Score8" type="number" class="col-1 text-center player0-0">
                     <div id="player0Total0" class="col-1 text-center"></div>
                 </div>
-                <div id="player1-0" class="row hide">
+                <div id="player1-0" class="row hide ml-3">
                     <div id="playerName1-0" class="col-1 text-center"></div>
                     <input id="player1Score0" type="number" class="col-1 text-center player1-0">
                     <input id="player1Score1" type="number" class="col-1 text-center player1-0">
@@ -135,7 +135,7 @@
                     <input id="player1Score8" type="number" class="col-1 text-center player1-0">
                     <div id="player1Total0" class="col-1 text-center"></div>
                 </div>
-                <div id="player2-0" class="row hide">
+                <div id="player2-0" class="row hide ml-3">
                     <div id="playerName2-0" class="col-1 text-center"></div>
                     <input id="player2Score0" type="number" class="col-1 text-center player2-0">
                     <input id="player2Score1" type="number" class="col-1 text-center player2-0">
@@ -148,7 +148,7 @@
                     <input id="player2Score8" type="number" class="col-1 text-center player2-0">
                     <div id="player2Total0" class="col-1 text-center"></div>
                 </div>
-                <div id="player3-0" class="row hide">
+                <div id="player3-0" class="row hide ml-3">
                     <div id="playerName3-0" class="col-1 text-center"></div>
                     <input id="player3Score0" type="number" class="col-1 text-center player3-0">
                     <input id="player3Score1" type="number" class="col-1 text-center player3-0">
@@ -165,7 +165,7 @@
             <div class="spacer10"></div>
             <!-- holes 10-18 scorecard -->
             <div id="holes10-18">
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">HOLE</div>
                     <div class="col-1 text-center">10</div>
                     <div class="col-1 text-center">11</div>
@@ -178,7 +178,7 @@
                     <div class="col-1 text-center">18</div>
                     <div class="col-1 text-center">IN</div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">YARDS</div>
                     <div class="col-1 text-center" id="yards9"></div>
                     <div class="col-1 text-center" id="yards10"></div>
@@ -191,7 +191,7 @@
                     <div class="col-1 text-center" id="yards17"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center"> HDCP</div>
                     <div class="col-1 text-center" id="hcp9"></div>
                     <div class="col-1 text-center" id="hcp10"></div>
@@ -204,7 +204,7 @@
                     <div class="col-1 text-center" id="hcp17"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center">PAR</div>
                     <div class="col-1 text-center" id="par9"></div>
                     <div class="col-1 text-center" id="par10"></div>
@@ -217,7 +217,7 @@
                     <div class="col-1 text-center" id="par17"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div id="player0-1" class="row hide">
+                <div id="player0-1" class="row hide ml-3">
                     <div id="playerName0-1" class="col-1 text-center"></div>
                     <input id="player0Score9" type="number" class="col-1 text-center player0-1">
                     <input id="player0Score10" type="number" class="col-1 text-center player0-1">
@@ -230,7 +230,7 @@
                     <input id="player0Score17" type="number" class="col-1 text-center player0-1">
                     <div id="player0Total1" class="col-1 text-center"></div>
                 </div>
-                <div id="player1-1" class="row hide">
+                <div id="player1-1" class="row hide ml-3">
                     <div id="playerName1-1" class="col-1 text-center"></div>
                     <input id="player1Score9" type="number" class="col-1 text-center player1-1">
                     <input id="player1Score10" type="number" class="col-1 text-center player1-1">
@@ -243,7 +243,7 @@
                     <input id="player1Score17" type="number" class="col-1 text-center player1-1">
                     <div id="player1Total1" class="col-1 text-center"></div>
                 </div>
-                <div id="player2-1" class="row hide">
+                <div id="player2-1" class="row hide ml-3">
                     <div id="playerName2-1" class="col-1 text-center"></div>
                     <input id="player2Score9" type="number" class="col-1 text-center player2-1">
                     <input id="player2Score10" type="number" class="col-1 text-center player2-1">
@@ -256,7 +256,7 @@
                     <input id="player2Score17" type="number" class="col-1 text-center player2-1">
                     <div id="player2Total1" class="col-1 text-center"></div>
                 </div>
-                <div id="player3-1" class="row hide">
+                <div id="player3-1" class="row hide ml-3">
                     <div id="playerName3-1" class="col-1 text-center"></div>
                     <input id="player3Score9" type="number" class="col-1 text-center player3-1">
                     <input id="player3Score10" type="number" class="col-1 text-center player3-1">
@@ -273,27 +273,27 @@
             <br>
 
             <div class="totals">
-                <div class="row">
+                <div class="row ml-3">
                     <div class="col-1 text-center"></div>
                     <div class="col-1 text-center">Total</div>
                     <div class="col-2 text-center">Outcome</div> 
                 </div>
-                <div id="player0-2" class="row hide">
+                <div id="player0-2" class="row hide ml-3">
                     <div id="playerName0-2" class="col-1 text-center"></div>
                     <div id="player0Score" class="col-1 text-center"></div>
                     <div id="player0Outcome" class="col-2 text-center"></div>
                 </div>
-                <div id="player1-2" class="row hide">
+                <div id="player1-2" class="row hide ml-3">
                     <div id="playerName1-2" class="col-1 text-center"></div>
                     <div id="player1Score" class="col-1 text-center"></div>
                     <div id="player1Outcome" class="col-2 text-center"></div>
                 </div>
-                <div id="player2-2" class="row hide">
+                <div id="player2-2" class="row hide ml-3">
                     <div id="playerName2-2" class="col-1 text-center"></div>
                     <div id="player2Score" class="col-1 text-center"></div>
                     <div id="player2Outcome" class="col-2 text-center"></div>
                 </div>
-                <div id="player3-2" class="row hide">
+                <div id="player3-2" class="row hide ml-3">
                     <div id="playerName3-2" class="col-1 text-center"></div>
                     <div id="player3Score" class="col-1 text-center"></div>
                     <div id="player3Outcome" class="col-2 text-center"></div>
