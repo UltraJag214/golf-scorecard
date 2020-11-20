@@ -13,12 +13,12 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="red-banner" id="red-banner">
+    <div class="red-banner hide" id="banner">
         This is an error!
     </div>
-    <div class="green-banner" id="green-banner">
+    <!-- <div class="green-banner" id="green-banner">
         Success!
-    </div>
+    </div> -->
     <br>
     <!-- choices for the user to make -->
     <div class="bodyWrap">
@@ -48,7 +48,7 @@
             </select>
             <br>
             <div class="wrap">
-                <input type="text" id="newUser" value="Username" class="form-control col-4">
+                <input type="text" id="newUser" placeholder="Player Name" class="form-control col-4">
                 <div class="spacer15"></div>
                 <button class="btn btn-success">Add User</button>
             </div>
@@ -109,18 +109,57 @@
                     <div class="col-1 text-center" id="par8"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Hayden</div>
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <div class="col-1 text-center">45</div>
+                <div id="player0-0" class="row hide">
+                    <div id="playerName0-0" class="col-1 text-center"></div>
+                    <input id="player0Score0" type="number" class="col-1 text-center">
+                    <input id="player0Score1" type="number" class="col-1 text-center">
+                    <input id="player0Score2" type="number" class="col-1 text-center">
+                    <input id="player0Score3" type="number" class="col-1 text-center">
+                    <input id="player0Score4" type="number" class="col-1 text-center">
+                    <input id="player0Score5" type="number" class="col-1 text-center">
+                    <input id="player0Score6" type="number" class="col-1 text-center">
+                    <input id="player0Score7" type="number" class="col-1 text-center">
+                    <input id="player0Score8" type="number" class="col-1 text-center">
+                    <div id="player0Total0" class="col-1 text-center"></div>
+                </div>
+                <div id="player1-0" class="row hide">
+                    <div id="playerName1-0" class="col-1 text-center"></div>
+                    <input id="player1Score0" type="number" class="col-1 text-center">
+                    <input id="player1Score1" type="number" class="col-1 text-center">
+                    <input id="player1Score2" type="number" class="col-1 text-center">
+                    <input id="player1Score3" type="number" class="col-1 text-center">
+                    <input id="player1Score4" type="number" class="col-1 text-center">
+                    <input id="player1Score5" type="number" class="col-1 text-center">
+                    <input id="player1Score6" type="number" class="col-1 text-center">
+                    <input id="player1Score7" type="number" class="col-1 text-center">
+                    <input id="player1Score8" type="number" class="col-1 text-center">
+                    <div id="player1Total0" class="col-1 text-center"></div>
+                </div>
+                <div id="player2-0" class="row hide">
+                    <div id="playerName2-0" class="col-1 text-center"></div>
+                    <input id="player2Score0" type="number" class="col-1 text-center">
+                    <input id="player2Score1" type="number" class="col-1 text-center">
+                    <input id="player2Score2" type="number" class="col-1 text-center">
+                    <input id="player2Score3" type="number" class="col-1 text-center">
+                    <input id="player2Score4" type="number" class="col-1 text-center">
+                    <input id="player2Score5" type="number" class="col-1 text-center">
+                    <input id="player2Score6" type="number" class="col-1 text-center">
+                    <input id="player2Score7" type="number" class="col-1 text-center">
+                    <input id="player2Score8" type="number" class="col-1 text-center">
+                    <div id="player2Total0" class="col-1 text-center"></div>
+                </div>
+                <div id="player3-0" class="row hide">
+                    <div id="playerName3-0" class="col-1 text-center"></div>
+                    <input id="player3Score0" type="number" class="col-1 text-center">
+                    <input id="player3Score1" type="number" class="col-1 text-center">
+                    <input id="player3Score2" type="number" class="col-1 text-center">
+                    <input id="player3Score3" type="number" class="col-1 text-center">
+                    <input id="player3Score4" type="number" class="col-1 text-center">
+                    <input id="player3Score5" type="number" class="col-1 text-center">
+                    <input id="player3Score6" type="number" class="col-1 text-center">
+                    <input id="player3Score7" type="number" class="col-1 text-center">
+                    <input id="player3Score8" type="number" class="col-1 text-center">
+                    <div id="player3Total0" class="col-1 text-center"></div>
                 </div>
             </div>
             <div class="spacer10"></div>
@@ -178,18 +217,57 @@
                     <div class="col-1 text-center" id="par17"></div>
                     <div class="col-1 text-center"></div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Hayden</div>
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <input type="number" class="col-1 text-center" value="5">
-                    <div class="col-1 text-center">90</div>
+                <div id="player0-1" class="row hide">
+                    <div id="playerName0-1" class="col-1 text-center"></div>
+                    <input id="player0Score9" type="number" class="col-1 text-center">
+                    <input id="player0Score10" type="number" class="col-1 text-center">
+                    <input id="player0Score11" type="number" class="col-1 text-center">
+                    <input id="player0Score12" type="number" class="col-1 text-center">
+                    <input id="player0Score13" type="number" class="col-1 text-center">
+                    <input id="player0Score14" type="number" class="col-1 text-center">
+                    <input id="player0Score15" type="number" class="col-1 text-center">
+                    <input id="player0Score16" type="number" class="col-1 text-center">
+                    <input id="player0Score17" type="number" class="col-1 text-center">
+                    <div id="player0Total1" class="col-1 text-center"></div>
+                </div>
+                <div id="player1-1" class="row hide">
+                    <div id="playerName1-1" class="col-1 text-center"></div>
+                    <input id="player1Score9" type="number" class="col-1 text-center">
+                    <input id="player1Score10" type="number" class="col-1 text-center">
+                    <input id="player1Score11" type="number" class="col-1 text-center">
+                    <input id="player1Score12" type="number" class="col-1 text-center">
+                    <input id="player1Score13" type="number" class="col-1 text-center">
+                    <input id="player1Score14" type="number" class="col-1 text-center">
+                    <input id="player1Score15" type="number" class="col-1 text-center">
+                    <input id="player1Score16" type="number" class="col-1 text-center">
+                    <input id="player1Score17" type="number" class="col-1 text-center">
+                    <div id="player1Total1" class="col-1 text-center"></div>
+                </div>
+                <div id="player2-1" class="row hide">
+                    <div id="playerName2-1" class="col-1 text-center"></div>
+                    <input id="player2Score9" type="number" class="col-1 text-center">
+                    <input id="player2Score10" type="number" class="col-1 text-center">
+                    <input id="player2Score11" type="number" class="col-1 text-center">
+                    <input id="player2Score12" type="number" class="col-1 text-center">
+                    <input id="player2Score13" type="number" class="col-1 text-center">
+                    <input id="player2Score14" type="number" class="col-1 text-center">
+                    <input id="player2Score15" type="number" class="col-1 text-center">
+                    <input id="player2Score16" type="number" class="col-1 text-center">
+                    <input id="player2Score17" type="number" class="col-1 text-center">
+                    <div id="player2Total1" class="col-1 text-center"></div>
+                </div>
+                <div id="player3-1" class="row hide">
+                    <div id="playerName3-1" class="col-1 text-center"></div>
+                    <input id="player3Score9" type="number" class="col-1 text-center">
+                    <input id="player3Score10" type="number" class="col-1 text-center">
+                    <input id="player3Score11" type="number" class="col-1 text-center">
+                    <input id="player3Score12" type="number" class="col-1 text-center">
+                    <input id="player3Score13" type="number" class="col-1 text-center">
+                    <input id="player3Score14" type="number" class="col-1 text-center">
+                    <input id="player3Score15" type="number" class="col-1 text-center">
+                    <input id="player3Score16" type="number" class="col-1 text-center">
+                    <input id="player3Score17" type="number" class="col-1 text-center">
+                    <div id="player3Total1" class="col-1 text-center"></div>
                 </div>
             </div>
             <br>
@@ -198,28 +276,27 @@
                 <div class="row">
                     <div class="col-1 text-center"></div>
                     <div class="col-1 text-center">Total</div>
-                    <div class="col-2 text-center">Outcome</div>
-                    
+                    <div class="col-2 text-center">Outcome</div> 
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Hayden</div>
-                    <div class="col-1 text-center">90</div>
-                    <div class="col-2 text-center">Right on Par</div>
+                <div id="player0-2" class="row hide">
+                    <div id="playerName0-2" class="col-1 text-center"></div>
+                    <div id="player0Score" class="col-1 text-center"></div>
+                    <div id="player0Outcome" class="col-2 text-center"></div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Chris</div>
-                    <div class="col-1 text-center">90</div>
-                    <div class="col-2 text-center">Right on Par</div>
+                <div id="player1-2" class="row hide">
+                    <div id="PlayerName1-2" class="col-1 text-center"></div>
+                    <div id="player1Score" class="col-1 text-center"></div>
+                    <div id="player1Outcome" class="col-2 text-center"></div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Ryker</div>
-                    <div class="col-1 text-center">90</div>
-                    <div class="col-2 text-center">On to the PGA!</div>
+                <div id="player2-2" class="row hide">
+                    <div id="playerName2-2" class="col-1 text-center"></div>
+                    <div id="player2Score" class="col-1 text-center"></div>
+                    <div id="player2Outcome" class="col-2 text-center"></div>
                 </div>
-                <div class="row">
-                    <div class="col-1 text-center">Laura</div>
-                    <div class="col-1 text-center">90</div>
-                    <div class="col-2 text-center">Better luck next time!</div>
+                <div id="player3-2" class="row hide">
+                    <div id="playerName3-2" class="col-1 text-center"></div>
+                    <div id="player3Score" class="col-1 text-center"></div>
+                    <div id="player3Outcome" class="col-2 text-center"></div>
                 </div>
             </div>
             <br>
