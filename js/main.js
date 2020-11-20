@@ -169,4 +169,10 @@ $(".player3-1").change(function(){
     updateTotal("#player3Total0", "#player3Total1", "#player3Score")
 })
 
+$('#newUser').keydown(function(event){ 
+    var keyCode = (event.keyCode ? event.keyCode : event.which);   
+    if (keyCode == 13) {
+        $('#newUserBtn').trigger('click');
+    }
+});
   
