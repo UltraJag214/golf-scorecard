@@ -129,17 +129,25 @@ function updateTotal(inScore, outScore, destination) {
     $(destination).text(inScoreValue + outScoreValue)
 }
 
-function calculateResults() {
+function calculateResults(playerNumber) {
+    if(playerNumber != null && playerNumber != undefined && playerNumber !== ""){
+        writeResults(playerNumber);
+        return
+    }
     for (let index = 0; index < selectedPlayerCount; index++) {
-        if ($(`#player${index}Score`).text() > parTotal) {
-            $(`#player${index}Outcome`).text(endGame.YouSuck)
-        }
-        else if ($(`#player${index}Score`).text() == parTotal) {
-            $(`#player${index}Outcome`).text(endGame.YouAverage)
-        }
-        else {
-            $(`#player${index}Outcome`).text(endGame.YouRock)
-        }
+        writeResults(index);
+    }
+}
+
+function writeResults(playderId){
+    if ($(`#player${playderId}Score`).text() > parTotal) {
+        $(`#player${playderId}Outcome`).text(endGame.YouSuck)
+    }
+    else if ($(`#player${playderId}Score`).text() == parTotal) {
+        $(`#player${playderId}Outcome`).text(endGame.YouAverage)
+    }
+    else {
+        $(`#player${playderId}Outcome`).text(endGame.YouRock)
     }
 }
 
@@ -226,4 +234,20 @@ $("#startGame").click(function () {
     }
     $(".thingsToLock").prop("disabled", true)
     $("#startGame").text("End Game")
+});
+
+$("#player0Score17").change(function(){
+    calculateResults(0)
+});
+
+$("#player1Score17").change(function(){
+    calculateResults(1)
+});
+
+$("#player2Score17").change(function(){
+    calculateResults(2)
+});
+
+$("#player3Score17").change(function(){
+    calculateResults(3)
 });
